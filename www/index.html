@@ -70,7 +70,7 @@
         if (navigator.connection.type == Connection.NONE) {
           navigator.notification.alert('Es necesaria conexión a internet para continuar');
         } else {
-     
+          navigator.splashscreen.show();
           cordova.InAppBrowser.open('https://agendacita.es/demo', '_blank', 'location=no');
         }
       }
