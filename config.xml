@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="es.agendacita.demo" version="1.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-    <name>agendacita.es demo</name>
+    <name>agendacita.es demo empresas</name>
     <description>
         agendacita.es reserva de cita previa para empresas
     </description>
