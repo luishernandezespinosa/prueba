@@ -77,11 +77,18 @@ function onDeviceReady() {
 document.addEventListener("deviceready", onDeviceReady, false);
 </script>
 
+    
+    <script type="text/javascript">
+        app.initialize();
+    </script>
+
 
 </head>
 
 <body>
-
+    <script type="text/javascript">
+        navigator.splashscreen.show();
+    </script>
     <div class="app">
         <h1>agendacita.es</h1>
         <div id="deviceready" class="blink">
