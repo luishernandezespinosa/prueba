@@ -46,39 +46,44 @@
     <script type="text/javascript" src="js/index.js"></script>
 
 
-    <script>
-      
-        document.addEventListener("deviceready", onDeviceReady, false);
+<script>
+var ref;
 
-      function onDeviceReady() {
-        
-        navigator.splashscreen.show();  
+function onDeviceReady() {
+    try {
+        ref = cordova.InAppBrowser.open('https://cordova.apache.org', '_blank', 'location=no,hidden=yes');
+        ref.addEventListener('loadstart', loadStartCallBack);
+        ref.addEventListener("loadstop", loadEndCallback, false);
+        ref.addEventListener("exit", onBackButton, false);
+    } catch (err) {
+        alert("Plugin Error - " + err.message);
+    }
 
-        if (navigator.connection.type == Connection.NONE) {
-          navigator.notification.alert('Es necesaria conexión a internet para continuar');
-        } else {
-            
-          cordova.InAppBrowser.open('https://agendacita.es/demo', '_blank', 'location=no,hidden=yes');
-        }
-      }
+    function onBackButton(e) {
+        navigator.app.exitApp();
+    }
 
-      function close() {
-             navigator.app.exitApp();
-      }
-   
-      
+    function loadStartCallBack() {
+        $('#status-message').text("loading please wait ...");
+    }
 
+    function loadEndCallback(){
+        alert("Your page has been loaded, showing ...");
+        $('#status-message').text("");
+        ref.show();
+    }
+}
 
-    </script>
-    
-    <script type="text/javascript">
-        app.initialize();
-    </script>
+document.addEventListener("deviceready", onDeviceReady, false);
+</script>
 
 
 </head>
 
 <body>
+    <script type="text/javascript">
+        navigator.splashscreen.show();
+    </script>
     <div class="app">
         <h1>agendacita.es</h1>
         <div id="deviceready" class="blink">
