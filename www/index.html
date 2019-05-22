@@ -51,7 +51,7 @@ var ref;
 
 function onDeviceReady() {
     try {
-        ref = cordova.InAppBrowser.open('https://cordova.apache.org', '_blank', 'location=no,hidden=yes');
+        ref = cordova.InAppBrowser.open('https://cordova.apache.org', '_blank', 'hidden=yes');
         ref.addEventListener('loadstart', loadStartCallBack);
         ref.addEventListener("loadstop", loadEndCallback, false);
         ref.addEventListener("exit", onBackButton, false);
@@ -81,9 +81,7 @@ document.addEventListener("deviceready", onDeviceReady, false);
 </head>
 
 <body>
-    <script type="text/javascript">
-        navigator.splashscreen.show();
-    </script>
+
     <div class="app">
         <h1>agendacita.es</h1>
         <div id="deviceready" class="blink">
