@@ -38,23 +38,60 @@
     -->
     <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
 
+    <link rel="stylesheet" type="text/css" href="js/jquery.mobile-1.4.5.min.css" />
     <link rel="stylesheet" type="text/css" href="css/index.css" />
-    <title>Hello World</title>
+    
+    <script src="jquery-1.11.1.min.js"></script>
+    <script src="jquery.mobile-1.4.5.min.js"></script>
+    <title>agendacita.es</title>
 </head>
 
 <body>
     <div class="app">
-        <h1>PhoneGap</h1>
+ 
         <div id="deviceready" class="blink">
             <p class="event listening">Connecting to Device</p>
             <p class="event received">Device is Ready</p>
         </div>
+        <div>
+            <br>
+            <button class="ui-btn ui-corner-all" style="font-size: 2em; background: #0071bc" onclick="onDeviceReady()">Entrar</button>
+        </div>
+    <div data-role="footer" data-position="fixed">
+        <h2>Versión Demo para empresas</h2>
+    </div>
     </div>
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
+
+
+    <script>
+      document.addEventListener("deviceready", onDeviceReady, false);
+
+      function onDeviceReady() {
+        
+      
+
+        if (navigator.connection.type == Connection.NONE) {
+          navigator.notification.alert('Es necesaria conexión a internet para continuar');
+        } else {
+          navigator.splashscreen.show();
+          cordova.InAppBrowser.open('https://agendacita.es/demo', '_blank', 'location=no');
+          navigator.splashscreen.hide();
+        }
+      }
+
+      function close() {
+             navigator.app.exitApp();
+      }
+   
+      
+    </script>
+    
     <script type="text/javascript">
         app.initialize();
     </script>
+
 </body>
 
 </html>
