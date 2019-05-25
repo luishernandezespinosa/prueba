@@ -66,7 +66,7 @@
 
 
     <script>
-      document.addEventListener("deviceready", onDeviceReady, false);
+      
 
       function onDeviceReady() {
         
@@ -77,15 +77,19 @@
         } else {
           navigator.splashscreen.show();
           cordova.InAppBrowser.open('https://agendacita.es/demo', '_blank', 'location=no');
-          navigator.splashscreen.hide();
+          
         }
       }
+
+      setTimeout(function() {
+        navigator.splashscreen.hide();
+    }, 4000);
 
       function close() {
              navigator.app.exitApp();
       }
    
-      
+      document.addEventListener("deviceready", onDeviceReady, false);
     </script>
     
     <script type="text/javascript">
