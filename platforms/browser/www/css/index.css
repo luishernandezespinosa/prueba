@@ -47,7 +47,7 @@ body {
 
 /* Portrait layout (default) */
 .app {
-    background:url(../../www/splash.png) no-repeat center ; /* 170px x 200px */
+    background:url(../../www/splash.png) no-repeat center; /* 170px x 200px */
     position:absolute;             /* position in the center of the screen */
     left:50%;
     top:50%;
