@@ -51,7 +51,8 @@
  
         <div id="deviceready" class="blink">
             <p class="event listening" style="background: darkorange;">Connecting to Device</p>
-            <p class="event received" style="background-color: silver;" onclick="onDeviceReady()">Entrar</p>
+            
+            <p class="event received" onclick="onDeviceReady()">Entrar</p>
         </div>
         <div>
            
@@ -66,12 +67,11 @@
 
     <script>
       
-      
+    document.addEventListener("deviceready", onDeviceReady, false);
 
-      function onDeviceReady() {
-        
-      
-      
+    function onDeviceReady() {
+ 
+        navigator.splashscreen.show();
 
         if (navigator.connection.type == Connection.NONE) {
           navigator.notification.alert('Es necesaria conexión a internet para continuar');
@@ -82,15 +82,15 @@
         }
       }
 
-      setTimeout(function() {
+    setTimeout(function() {
         navigator.splashscreen.hide();
     }, 10000);
 
-      function close() {
+    function close() {
              navigator.app.exitApp();
-      }
+    }
    
-      document.addEventListener("deviceready", onDeviceReady, false);
+      
     </script>
     
     <script type="text/javascript">
