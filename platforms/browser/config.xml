@@ -29,4 +29,5 @@
     <preference name="ShowSplashScreenSpinner" value="true" />
     <preference name="SplashMaintainAspectRatio" value="true" />
     <preference name="SplashShowOnlyFirstTime" value="false" />
+    <preference name="InAppBrowserOverrideUserAgent" value="Mozilla/5.0 Google" />
 </widget>
