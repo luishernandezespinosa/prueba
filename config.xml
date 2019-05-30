@@ -11,6 +11,7 @@
     <preference name="DisallowOverscroll" value="true" />
     <preference name="android-minSdkVersion" value="14" />
 
+    <splash src="splash.png" />
     <preference name="SplashScreenDelay" value="3000" />
     <preference name="AutoHideSplashScreen" value="true" />
     <preference name="ShowSplashScreenSpinner" value="true"/>
@@ -25,6 +26,16 @@
     
    <preference name="InAppBrowserOverrideUserAgent" value="Mozilla/5.0 Google" />
    <preference name="OverrideUserAgent" value="Mozilla/5.0 Google" />
+
+
+   <platform name="browser">
+    <preference name="SplashScreen" value="splash" /> <!-- defaults to "/img/logo.png" -->
+    <preference name="AutoHideSplashScreen" value="true" /> <!-- defaults to "true" -->
+    <preference name="SplashScreenDelay" value="8000" /> <!-- defaults to "3000" -->
+    
+    <preference name="ShowSplashScreen" value="true" /> <!-- defaults to "true" -->
+
+</platform>
     
     <platform name="android">
         <icon density="ldpi" src="www/res/icon/android/drawable-ldpi-icon.png" />
@@ -39,10 +50,10 @@
 <splash src="www/res/screen/android/drawable-land-mdpi-screen.png" density="land-mdpi"/>
 <splash src="www/res/screen/android/drawable-land-xhdpi-screen.png" density="land-xhdpi"/>
 
-<splash src="www/res/screen/android/drawable-port-hdpi-screen2.png" density="port-hdpi"/>
-<splash src="www/res/screen/android/drawable-port-ldpi-screen2.png" density="port-ldpi"/>
-<splash src="www/res/screen/android/drawable-port-mdpi-screen2.png" density="port-mdpi"/>
-<splash src="www/res/screen/android/drawable-port-xhdpi-screen2.png" density="port-xhdpi"/>
+<splash src="res/screen/android/splash-port-hdpi.png" qualifier="port-hdpi"/>
+<splash src="res/screen/android/splash-port-ldpi.png" qualifier="port-ldpi"/>
+<splash src="res/screen/android/splash-port-mdpi.png" qualifier="port-mdpi"/>
+<splash src="res/screen/android/splash-port-xhdpi.png" qualifier="port-xhdpi"/>
     </platform>
     <platform name="ios">
         <icon height="57" platform="ios" src="www/res/icon/ios/icon.png" width="57" />
