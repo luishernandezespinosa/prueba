@@ -12,7 +12,7 @@
     <preference name="android-minSdkVersion" value="14" />
 
     <splash src="splash.png" />
-    <preference name="SplashScreenDelay" value="3000" />
+    <preference name="SplashScreenDelay" value="8000" />
     <preference name="AutoHideSplashScreen" value="true" />
     <preference name="ShowSplashScreenSpinner" value="true"/>
     <preference name="SplashMaintainAspectRatio" value="true" />
