@@ -23,6 +23,8 @@
     <plugin name="cordova-plugin-inappbrowser" source="npm" spec="~1.3.0" />
     <plugin name="cordova-plugin-network-information" source="npm" spec="~1.2.0" />
     <plugin name="cordova-plugin-splashscreen" source="npm" spec="~3.2.1" />
+
+    <plugin name="cordova-plugin-whitelist" source="npm" spec="~1.2.1" />
     
    <preference name="InAppBrowserOverrideUserAgent" value="Mozilla/5.0 Google" />
    <preference name="OverrideUserAgent" value="Mozilla/5.0 Google" />
