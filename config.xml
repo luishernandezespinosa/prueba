@@ -119,9 +119,11 @@
     <platform name="android">
         <allow-intent href="market:*" />
         <allow-intent href="whatsapp:*" />
+        <allow-navigation href="*" />
     </platform>
     <platform name="ios">
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
+        <allow-navigation href="*" />
     </platform>
 </widget>
