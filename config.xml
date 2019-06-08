@@ -109,6 +109,7 @@
     </platform>
     <access origin="*" />
     <access origin="whatsapp:*" launch-external="yes" />
+    <allow-intent href="*" />
     <allow-intent href="whatsapp:*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
@@ -116,12 +117,15 @@
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
+    <allow-navigation href="*" />
     <platform name="android">
+        <allow-intent href="*" />
         <allow-intent href="market:*" />
         <allow-intent href="whatsapp:*" />
         <allow-navigation href="*" />
     </platform>
     <platform name="ios">
+        <allow-intent href="*" />
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
         <allow-navigation href="*" />
