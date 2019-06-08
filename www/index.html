@@ -50,7 +50,7 @@
     <div class="app">
  
         <div id="deviceready" class="blink">
-            <p class="event listening" style="background: darkorange;">Connecting to Device</p>
+            <p class="event listening" style="background: darkorange;">Connecting</p>
             
             <p class="event received" onclick="onDeviceReady()">Entrar</p>
 
@@ -73,13 +73,20 @@
     function onDeviceReady() {
  
         navigator.splashscreen.show();
-        var options = "location=no";
+
+        var options = "location=no,hidden=yes";
+        var ref = cordova.InAppBrowser.open('https://agendacita.es/democliente', '_blank', options);
+         
 
         if (navigator.connection.type == Connection.NONE) {
-          navigator.notification.alert('Es necesaria conexión a internet para continuar');
+          navigator.notification.alert('Es necesaria conexión a internet');
         } else {
           
-          cordova.InAppBrowser.open('https://agendacita.es/democliente', '_blank', options);
+            ref.addEventListener('loadstop', function(event) {
+                 ref.show();
+            });
+
+          //cordova.InAppBrowser.open('https://agendacita.es/democliente', '_blank', options);
           
         }
       }
